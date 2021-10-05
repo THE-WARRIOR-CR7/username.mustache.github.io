@@ -2,7 +2,6 @@ nosex=0;
 nosey=0;
 function preload() {
 mustache=loadImage("https://i.postimg.cc/3x3QzSGq/m.png");
-
 }
 function setup() {
     canvas=createCanvas(375,375);
@@ -28,7 +27,7 @@ if(results.length>0) {
     console.log(results);
     console.log("nose x "+results[0].pose.nose.x);
     console.log("nose y "+results[0].pose.nose.y);
-    nosex=results[0].nose.pose.x;
-    nosey=results[0].nose.pose.y;
+    nosex=results[0].pose.nose.x-155;
+    nosey=results[0].pose.nose.y-50;
 } 
 }
